@@ -27,7 +27,16 @@ namespace WpfApp1
 
         private void AceptarButton_Click(object sender, RoutedEventArgs e)
         {
-            SaludoTextBlock.Text = "Hola " + NombreTextBox.Text;
+            if(NombreTextBox.Text == "")
+                SaludoTextBlock.Text = "Hola mundo!";
+            else
+                SaludoTextBlock.Text = "Hola " + NombreTextBox.Text;
+        }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            SaludoTextBlock.Text = "Hola mundo!";
+            NombreTextBox.Text = "";
         }
     }
 }
